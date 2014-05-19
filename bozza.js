@@ -1,4 +1,20 @@
 
+//console.timeStamp('<loading>'); if(g){}
+setTimeout(function(){
+	//
+	function f(a,b){
+		alert(a+b+"isLoaded");
+	};
+	//
+	var l='load', w=window, d=w.document, s='atLoad', init=function(){w.removeEventListener(l,s,0);f(w,d)};
+	if(d.readyState==='complete'){init()}else{w.addEventListener(l,s,0)};
+	//
+	alert("Hello");
+}, 3000);
+
+
+
+/*
 (function(f){
 	var e=this,l='load';
 	e.addEventListener(l,function onLoad(evt){e.removeEventListener(l,onLoad,0);f(e,e.document)},0);
