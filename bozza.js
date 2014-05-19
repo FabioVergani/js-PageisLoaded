@@ -1,4 +1,16 @@
+//
+(function(w,f){
+	var l='load', d=w.document, i='at'+l, init=function(){w.removeEventListener(l,i,0);f(w,d)};
+	w.addEventListener(l,init,0);
+})(this,function(a,b){
+ alert(a+b+"isLoaded");
+});
+//
+//function Run(f){f()};
+//if(d.readyState==='complete'){Run(init)}else{};
 
+
+/*
 //console.timeStamp('<loading>'); if(g){}
 setTimeout(function(){
 	//
